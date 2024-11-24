@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Obelous">
+    <meta property="og:description" content="About me, My Server software and more">
+    <meta name="description" content="About me, My Server software and more">
+    <meta property="og:image" content="https://cdn.discordapp.com/avatars/583276052726677505/424f44753186bdd8a1e8e6e15d5dbfb2.webp?size=1024&format=webp">
+    <title>Obelous</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        :root{
+            --primary-white: #e7e7e7;
+            --seconday-highlight: rgba(255, 255, 255, 0.322);
+            --primary-dark: #240f1f;
+            --seconday-dark: #240f1f;
+            --border-size: 20px;
+        }
+        @keyframes enter {
+            from {
+                opacity: 0;
+                transform: translateY(10px) scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        body{
+            background-color: var(--primary-dark);
+            color:var(--primary-white);
+            font-family: "Source Code Pro", serif;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            width: fit-content;
+            border: 3px solid var(--primary-white);
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: var(--border-size);
+            background: linear-gradient(to bottom, #2c1327, #1a0a16);
+            width: 70%;
+            min-width: 280px;
+            max-width: 800px;
+            animation: enter 0.5s ease-out;
+        }
+        h1{
+            margin: 0px;
+        }
+        a{
+            color: var(--primary-white);
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        a:hover{
+            text-decoration: underline var(--seconday-highlight);
+            transition: all 0.2s;
+        }
+        fieldset{
+            flex-direction: column;
+            display: flex;
+            border: 2px solid var(--primary-white);
+            border-radius: var(--border-size);
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+        }
+        legend{
+            font-size: 1.2em;
+        }
+        p{
+            margin-top:0px;
+            font-size: 1.4em;
+        }
+        span{
+            font-size: 0.85em;
+            font-weight: lighter;
+        }
+        img{
+            background-color: var(--primary-white);
+            padding:5px;
+            border-radius: 10px;
+            margin-right: 10px;
+            height: 80px;
+            width:auto;
+        }
+        .footer{
+            display: flex;
+        }
+        @media only screen and (max-width:800px){
+            .footer{
+                display: unset;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1 tabindex="0">Obelous</h1><span>(Erik Kiraly)</span>
+            <h2>About:</h2>
+            <p> Web developer for 3 years <br>  Linux user for 6 years <br> Tech enthusiast for 7 years <br> Alive for 16 years </p>
+        </section>
+        <section>
+            <h2 style="margin-top: 0px;">Services:</h2>
+            <fieldset>
+                <legend>Media</legend>
+                <a href="https://jf.obelous.dev/">Jellyfin</a>
+                <a href="https://js.obelous.dev/">Jellyseer</a>
+                <a href="https://qbt.obelous.dev/">Qbittorrent</a>
+                <a href="https://sonarr.obelous.dev/">Sonarr</a>
+                <a href="https://radarr.obelous.dev/">Radarr</a>
+                <a href="https://prowlarr.obelous.dev/">Prowlarr</a>
+                <a href="https://bazarr.obelous.dev/">Bazarr</a>
+                <a href="https://solverr.obelous.dev/">FlareSolverr</a>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Other</legend>
+                <a href="https://speed.obelous.dev/">OpenSpeedTest</a>
+                <a href="https://rclone.obelous.dev/">Rclone Webui</a>
+                <a href="https://stat.obelous.dev/">Jellystat</a>
+                <a href="https://monitor.obelous.dev/">Zabbix</a>
+                <a href="https://dl.obelous.dev/">Onedrive Index</a>
+            </fieldset>
+        </section>
+        <section>
+            <h2>Contact:</h2>
+            <a href="mailto:1@obelous.dev">Email</a>
+            <a href="https://discord.com/users/583276052726677505">Discord</a>
+            <a href="https://github.com/0belous">Github</a>
+            <h2>Why?</h2>
+            <p>"Security through obscurity is like hiding your spare key under the doormat—you're only fooling yourself."</p>
+        </section>
+        <hr style="width:100%; margin-bottom:20px;">
+        <section class="footer">
+            <img src="html.png" alt="HTML logo" height="80px" width="80px">
+            <img src="css.png" alt="CSS logo" height="80px" width="80px">
+            <p style="margin-bottom: 0px;">Made the proper way: No NPM, no NodeJS, no Dependencies, no nonsense.</p>
+        </section>
+    </main>
+    <script>
+        /* Fuck you */
+        if(!window.location.href.includes("obelous") || !window.location.href=="http://127.0.0.1:3000/"){
+            window.location.href = "https://obelous.dev/"
+        }
+    </script>
+</body>
+<!-- Avoid FCP blocking -->
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</html>
