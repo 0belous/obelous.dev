@@ -13,9 +13,9 @@
     <style>
         :root{
             --primary-white: #e7e7e7;
-            --seconday-highlight: rgba(255, 255, 255, 0.322);
+            --seconday-highlight: #ffffff52;
             --primary-dark: #240f1f;
-            --seconday-dark: #240f1f;
+            --seconday-dark: #1a0a16;
             --border-size: 20px;
         }
         @keyframes enter {
@@ -28,10 +28,17 @@
                 transform: translateY(0) scale(1);
             }
         }
-        body{
-            background-color: var(--primary-dark);
-            color:var(--primary-white);
+        body {
+            background: repeating-linear-gradient(  var(--primary-dark),
+            var(--primary-dark) 5px,
+            var(--seconday-dark) 5px,
+            var(--seconday-dark) 10px); 
+            color: var(--primary-white);
             font-family: "Source Code Pro", serif;
+            overflow: auto;
+            min-height: calc(100vh - 20px);
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
         main{
             display: flex;
@@ -42,7 +49,7 @@
             box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
             padding: 20px;
             border-radius: var(--border-size);
-            background: linear-gradient(to bottom, #2c1327, #1a0a16);
+            background: linear-gradient(to bottom, #2c1327, var(--seconday-dark));
             width: 70%;
             min-width: 280px;
             max-width: 800px;
@@ -143,7 +150,7 @@
     </main>
     <script>
         /* Fuck you */
-        if(!window.location.href.includes("obelous") || !window.location.href=="http://127.0.0.1:3000/"){
+        if(!window.location.href.includes("https://obelous.dev/") || !window.location.href.includes("localhost")){
             window.location.href = "https://obelous.dev/"
         }
     </script>
