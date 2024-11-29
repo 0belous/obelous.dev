@@ -28,32 +28,49 @@
                 transform: translateY(0) scale(1);
             }
         }
+        @keyframes scrollBackground {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 0 100%;
+            }
+        }
         body {
-            background: repeating-linear-gradient(  var(--primary-dark),
-            var(--primary-dark) 5px,
-            var(--seconday-dark) 5px,
-            var(--seconday-dark) 10px); 
+            background: repeating-linear-gradient(
+                var(--primary-dark),
+                var(--primary-dark) 5px,
+                var(--seconday-dark) 5px,
+                var(--seconday-dark) 10px
+            ); 
+            background-size: 100% 200%;
             color: var(--primary-white);
             font-family: "Source Code Pro", serif;
             overflow: auto;
             min-height: calc(100vh - 20px);
             margin-top: 10px;
             margin-bottom: 10px;
+            animation: scrollBackground 90s linear infinite;
         }
         main{
             display: flex;
             flex-direction: column;
-            margin: auto;
-            width: fit-content;
+            margin: 0 auto;
             border: 3px solid var(--primary-white);
             box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
             padding: 20px;
             border-radius: var(--border-size);
             background: linear-gradient(to bottom, #2c1327, var(--seconday-dark));
-            width: 70%;
+            width: 80%;
             min-width: 280px;
             max-width: 800px;
             animation: enter 0.5s ease-out;
+            box-sizing: border-box;
+        }
+        @media only screen and (max-width: 600px) {
+            main {
+                width: 95%;
+            }
         }
         h1{
             margin: 0px;
@@ -99,6 +116,9 @@
         @media only screen and (max-width:800px){
             .footer{
                 display: unset;
+            }
+            main{
+                width: 90%;
             }
         }
     </style>
@@ -148,12 +168,6 @@
             <p style="margin-bottom: 0px;">Made the proper way: No NPM, no NodeJS, no Dependencies, no nonsense.</p>
         </section>
     </main>
-    <script>
-        /* Fuck you */
-        if(!window.location.href.includes("https://obelous.dev/") || !window.location.href.includes("localhost")){
-            window.location.href = "https://obelous.dev/"
-        }
-    </script>
 </body>
 <!-- Avoid FCP blocking -->
 <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
