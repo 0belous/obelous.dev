@@ -6,7 +6,10 @@
     <meta property="og:title" content="Obelous">
     <meta property="og:description" content="About me, My Server software and more">
     <meta name="description" content="About me, My Server software and more">
-    <meta property="og:image" content="https://cdn.discordapp.com/avatars/583276052726677505/424f44753186bdd8a1e8e6e15d5dbfb2.webp?size=1024&format=webp">
+    <meta name="og:url" content="https://obelous.dev/">
+    <meta property="og:type" content="image.webp" />
+    <meta property="og:image" content="https://cdn.discordapp.com/avatars/583276052726677505/ec03357dd3adeecf7bc91c8f95d0e243.webp?size=1024">
+    <meta property="og:image:secure_url" content="https://cdn.discordapp.com/avatars/583276052726677505/ec03357dd3adeecf7bc91c8f95d0e243.webp?size=1024">
     <title>Obelous</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -82,7 +85,7 @@
         }
         a:hover{
             text-decoration: underline var(--seconday-highlight);
-            transition: all 0.2s;
+            transition: all 0.1s;
         }
         fieldset{
             flex-direction: column;
@@ -110,6 +113,16 @@
             height: 80px;
             width:auto;
         }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--seconday-dark);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-white);
+            border-radius: 8px;;
+        }
         .footer{
             display: flex;
         }
@@ -136,6 +149,7 @@
                 <legend>Media</legend>
                 <a href="https://jf.obelous.dev/">Jellyfin</a>
                 <a href="https://js.obelous.dev/">Jellyseer</a>
+                <a href="https://jfa.obelous.dev/">jfa-go</a>
                 <a href="https://qbt.obelous.dev/">Qbittorrent</a>
                 <a href="https://sonarr.obelous.dev/">Sonarr</a>
                 <a href="https://radarr.obelous.dev/">Radarr</a>
@@ -157,6 +171,7 @@
             <h2>Contact:</h2>
             <a href="mailto:erik@kiraly.me" tabindex="0">Email</a>
             <a href="https://discord.com/users/583276052726677505" tabindex="0">Discord</a>
+            <a href="https://bsky.app/profile/erik.kiraly.me" tabindex="0">Bluesky</a>
             <a href="https://github.com/0belous" tabindex="0">Github</a>
             <h2>Why?</h2>
             <p>"Security through obscurity is for Cowards."</p>
