@@ -75,9 +75,25 @@
             animation: enter 0.5s ease-out;
             box-sizing: border-box;
         }
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 800px) {
             main {
-                width: 95%;
+                width: 100%;
+                min-height: 100vh;
+                border: 0px;
+                margin: 0;
+                border-radius: 0px;
+                background: repeating-linear-gradient(
+                    var(--primary-dark),
+                    var(--primary-dark) 5px,
+                    var(--seconday-dark) 5px,
+                    var(--seconday-dark) 10px
+                );
+            }
+            body{
+                margin: 0;
+            }
+            .footer{
+                display: unset!important;
             }
         }
         h1{
@@ -87,6 +103,7 @@
             color: var(--primary-white);
             font-size: 1.3em;
             font-weight: bold;
+            width: fit-content;
         }
         a:hover{
             text-decoration: underline var(--seconday-highlight);
@@ -131,14 +148,6 @@
         .footer{
             display: flex;
         }
-        @media only screen and (max-width:800px){
-            .footer{
-                display: unset;
-            }
-            main{
-                width: 90%;
-            }
-        }
         .list{
             margin: 0;
         }
@@ -171,6 +180,9 @@
             <a href="https://speed.obelous.dev/">OpenSpeedTest</a>
             <a href="https://rclone.obelous.dev/">Rclone Webui</a>
             <a href="https://stat.obelous.dev/">Jellystat</a>
+            <a href="https://stats.uptimerobot.com/AQTtHMSsL2">UptimeRobot</a>
+            <a href="https://inviduous.obelous.dev/feed/trending">Inviduous</a>
+            <a href="https://code.obelous.dev">VS code</a>
             <a href="https://dl.obelous.dev/">Onedrive Index</a>
         </fieldset>
         <h2>Contact:</h2>
