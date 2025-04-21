@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Obelous" />
+    <meta property="og:title" content="Obelous">
+    <meta property="og:description" content="About me, My Server software and more">
+    <meta name="description" content="About me, My Server software and more">
+    <meta name="og:url" content="https://obelous.dev/">
+    <meta property="og:type" content="image.webp">
+    <meta property="og:image" content="https://cdn.discordapp.com/avatars/583276052726677505/ec03357dd3adeecf7bc91c8f95d0e243.webp?size=1024">
+    <meta property="og:image:secure_url" content="https://cdn.discordapp.com/avatars/583276052726677505/ec03357dd3adeecf7bc91c8f95d0e243.webp?size=1024">
+    <title>Obelous</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        :root{
+            --primary-white: #e7e7e7;
+            --seconday-highlight: #ffffff52;
+            --primary-dark: #240f1f;
+            --seconday-dark: #1a0a16;
+            --border-size: 20px;
+        }
+        @keyframes enter {
+            from {
+                opacity: 0;
+                transform: translateY(10px) scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        @keyframes scrollBackground {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 0 100%;
+            }
+        }
+        body {
+            background: repeating-linear-gradient(
+                var(--primary-dark),
+                var(--primary-dark) 5px,
+                var(--seconday-dark) 5px,
+                var(--seconday-dark) 10px
+            ); 
+            background-size: 100% 200%;
+            color: var(--primary-white);
+            font-family: "Source Code Pro", serif;
+            overflow: auto;
+            min-height: calc(100vh - 20px);
+            margin-top: 10px;
+            margin-bottom: 10px;
+            animation: scrollBackground 90s linear infinite;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            border: 3px solid var(--primary-white);
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: var(--border-size);
+            background: linear-gradient(to bottom, #2c1327, var(--seconday-dark));
+            width: 80%;
+            min-width: 280px;
+            max-width: 800px;
+            animation: enter 0.5s ease-out;
+            box-sizing: border-box;
+        }
+        @media only screen and (max-width: 800px) {
+            main {
+                width: 100%;
+                min-height: 100vh;
+                border: 0px;
+                margin: 0;
+                border-radius: 0px;
+                background: repeating-linear-gradient(
+                    var(--primary-dark),
+                    var(--primary-dark) 5px,
+                    var(--seconday-dark) 5px,
+                    var(--seconday-dark) 10px
+                );
+            }
+            body{
+                margin: 0;
+            }
+            .footer{
+                display: unset!important;
+            }
+        }
+        h1{
+            margin: 0px;
+        }
+        a{
+            color: var(--primary-white);
+            font-size: 1.3em;
+            font-weight: bold;
+            width: fit-content;
+        }
+        a:hover{
+            text-decoration: underline var(--seconday-highlight);
+            transition: all 0.1s;
+        }
+        fieldset{
+            flex-direction: column;
+            display: flex;
+            border: 2px solid var(--primary-white);
+            border-radius: var(--border-size);
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+        }
+        legend{
+            font-size: 1.2em;
+        }
+        p{
+            margin-top:0px;
+            font-size: 1.4em;
+        }
+        span{
+            font-size: 0.85em;
+            font-weight: lighter;
+        }
+        img{
+            background-color: var(--primary-white);
+            padding:5px;
+            border-radius: 10px;
+            margin-right: 10px;
+            height: 80px;
+            width:auto;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--seconday-dark);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-white);
+            border-radius: 8px;;
+        }
+        .footer{
+            display: flex;
+        }
+        .list{
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>404 Not found</h1>
+        <img src="404.png" alt="" srcset="" style="height:auto; padding:0px; width:100%; border-radius: 0px;">
+        <a href="/">Go back</a>
+    </main>
+</body>
+<!-- Avoid FCP blocking -->
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</html>
