@@ -22,52 +22,80 @@
 </head>
 <body>
     <main>
-        <h1 tabindex="0">Obelous</h1><span>(Erik Kiraly)</span>
-        <h2>About:</h2>
-        <p class="list">Web developer for 4 years</p>
-        <p class="list">Linux user for 7 years</p>
-        <p class="list">Tech enthusiast for 10 years</p>
-        <p class="list">Alive for 17 years</p>
-        <br>
-        <h2 style="margin-top: 0px;">Services:</h2>
-        <fieldset>
-            <legend>Media</legend>
-            <a href="https://jf.obelous.dev/">Jellyfin</a>
-            <a href="https://js.obelous.dev/">Jellyseer</a>
-            <a href="https://jfa.obelous.dev/">jfa-go</a>
-            <a href="https://qbt.obelous.dev/">Qbittorrent</a>
-            <a href="https://sonarr.obelous.dev/">Sonarr</a>
-            <a href="https://radarr.obelous.dev/">Radarr</a>
-            <a href="https://prowlarr.obelous.dev/">Prowlarr</a>
-            <a href="https://bazarr.obelous.dev/">Bazarr</a>
-        </fieldset>
-        <br>
-        <fieldset>
-            <legend>Other</legend>
-            <a href="https://speed.obelous.dev/">OpenSpeedTest</a>
-            <a href="https://rclone.obelous.dev/">Rclone Webui</a>
-            <a href="https://stat.obelous.dev/">Jellystat</a>
-            <a href="https://stats.uptimerobot.com/AQTtHMSsL2">UptimeRobot</a>
-            <a href="https://inviduous.obelous.dev/feed/trending">Inviduous</a>
-            <a href="https://code.obelous.dev">VS code</a>
-            <a href="https://dl.obelous.dev/">Onedrive Index</a>
-        </fieldset>
-        <h2>Contact:</h2>
-        <fieldset>
-            <legend>Links</legend>
-            <a href="mailto:erik@kiraly.me" tabindex="0">Email</a>
-            <a href="https://discord.com/users/583276052726677505" tabindex="0">Discord</a>
-            <a href="https://bsky.app/profile/erik.kiraly.me" tabindex="0">Bluesky</a>
-            <a href="https://github.com/0belous" tabindex="0">Github</a>
-        </fieldset>
-        <h2>Why?</h2>
-        <p>"Security through obscurity is for Cowards."</p>
-        <div class="footer">
-            <img src="html.png" alt="HTML logo" height="80" width="80">
-            <img src="css.png" alt="CSS logo" height="80" width="80">
-            <p style="margin-bottom: 0px;">Made the proper way: No NPM, no NodeJS, no Dependencies, no nonsense.</p>
+        <div class="col">
+            <div class="obelous">
+                <img src="obelous.png" alt="" class="pfp">
+                <h1 tabindex="0">Obelous</h1>
+            </div>
+            <br>
+            <h2>Contact:</h2>
+            <fieldset>
+                <legend>Links</legend>
+                <a href="https://discord.com/users/583276052726677505" tabindex="0">Discord</a>
+                <a href="https://github.com/0belous" tabindex="0">Github</a>
+            </fieldset>
+            <h2 style="margin-top: 0px;">Services:</h2>
+            <fieldset>
+                <legend>Media</legend>
+                <a href="https://jf.obelous.dev/">Jellyfin</a>
+                <a href="https://dash.obelous.dev/">Dashdot</a>
+                <a href="https://js.obelous.dev/">Jellyseer</a>
+                <a href="https://account.obelous.dev/">JFA</a>
+                <a href="https://qbt.obelous.dev/">Qbittorrent</a>
+                <a href="https://sonarr.obelous.dev/">Sonarr</a>
+                <a href="https://radarr.obelous.dev/">Radarr</a>
+                <a href="https://prowlarr.obelous.dev/">Prowlarr</a>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Other</legend>
+                <a href="https://speed.obelous.dev/">OpenSpeedTest</a>
+                <a href="https://rclone.obelous.dev/">Rclone Webui</a>
+                <a href="https://stat.obelous.dev/">Jellystat</a>
+                <a href="https://stats.uptimerobot.com/AQTtHMSsL2">UptimeRobot</a>
+                <a href="https://code.obelous.dev">VS code</a>
+                <a href="https://dl.obelous.dev/">Onedrive Index</a>
+            </fieldset>
+        </div>
+        <div class="col widgets">
+            <div class="widget">
+                <img src="https://trakt-widgets.vercel.app/obelous/watched/card" alt="" srcset="">
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3>CPU</h3>
+                    <div class="widget"><iframe src="https://dash.obelous.dev/?graph=cpu" frameborder="0"></iframe></div>
+                    <h3>RAM</h3>
+                    <div class="widget"><iframe src="https://dash.obelous.dev/?graph=ram" frameborder="0"></iframe></div>
+                </div>
+                <div class="col profile">
+                    <div class="widget">
+                        <img src="https://trakt-widgets.vercel.app/obelous/profile/poster" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
+    <script>
+        function updateGridOffset() {
+            const gridSize = 50;
+            const remainder = window.innerWidth % gridSize;
+            const offset = -((gridSize - remainder) / 2);
+            document.body.style.setProperty('--x-offset', `${offset}px`);
+        }
+        window.addEventListener('resize', updateGridOffset);
+        window.addEventListener('DOMContentLoaded', updateGridOffset);
+
+        function updateParallax() {
+            if(window.innerWidth>800){
+            const parallaxSpeed = -0.5;
+            const scrollY = window.scrollY;
+            document.body.style.setProperty('--parallax-offset', `${scrollY * parallaxSpeed}px`);
+            }
+        }
+        window.addEventListener('scroll', updateParallax);
+        window.addEventListener('DOMContentLoaded', updateParallax);
+    </script>
 </body>
 <!-- Avoid FCP blocking -->
 <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
