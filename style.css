@@ -28,6 +28,7 @@
     .widgets{
         margin-left: 0px!important;
         width: 100%!important;
+        height: fit-content;
         box-sizing: border-box!important;
         align-self: center!important; /* Center widgets column */
     }
